@@ -1,0 +1,60 @@
+
+% These lines tell TeXShop to typeset with xelatex, and to open and 
+% save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{book}
+\usepackage{anyfontsize}
+\usepackage{geometry} 
+\geometry{letterpaper}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\bfseries\filcenter}{}{1em}{}
+
+% \usepackage{blindtext}
+\usepackage{lettrine}
+\setlength{\parskip}{1em}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\usepackage{xltxtra,polyglossia}
+% xltxtra automatically loads fontspec and xunicode
+
+\setmainlanguage{hebrew}
+\newfontfamily\hebrewfont[BoldFont={Miriam CLM}]{Frank Ruehl CLM}
+
+\setotherlanguages{english}
+\setromanfont[Mapping=tex-text]{Hoefler Text}
+
+\title{
+    יום טוב של ראש השנה
+    \vskip0.1em
+    {\fontsize{50}{60}\selectfont
+    תרס״ו
+    }
+}
+% \subtitle
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{בס״ד, ליל ב׳ דר״ה, רס״ו}
+\leftskip=0pt plus-.5fil
+\rightskip=0pt plus.5fil
+\parfillskip=0pt plus1fil
+\lettrine[findent=0.75em, nindent=0em, loversize=-.4, lraise=.6]{יום}
+ טוב של ר״ה שחל להיות בשבת במקדש היו תוקעין אבל לא המדינה, ומפרש בגמ׳ התעם משום גזירה דרבה, דאמר רבה הכל חייבין בתקיעת שופר ואין הכל בקיאין בתקיעת שופר, גזירה שמא יטלנו בידו וילך אצל הבקי ללמוד ויעבירנו ד״א ברה״ר. ולכאורה אינו מובן, מה ראו חז״ל לעקור מ״ע דאורייתא משום חשש גזירה בעלמא, והלא החשש הוא להדיוטים וקלי הדעת, ואיך מנעו המצוה לגמרי מכמה צדיקים גדולים וטובים ובפרט מצות שופר שהיא מצוה רמה ונשאה מאד, וכידוע דכל המצות שבחדש זה הם מצות כלליות, וכמ״ש במד״ר ע״פ ובחדש השביעי שמושבע בכל, שיש בו הרבה מצות, וחלוקים המה מהמצות דכל השנה, שהן מצות כלליות, ובפרט מצות שופר שמעורר וממשיך פנימיות ועצמות אוא״ס כו׳.
+
+\begin{english}
+    \leftskip=0pt \rightskip=0pt
+\noindent \lettrine{I}{f} the holiday of Rosh Hashanah fell out on Shabbat, [the shofar] would be sounded in the Temple, but not [throughout the rest of] the country. It is explained in the Gemara that this is because of the decree of Rabbah, who said, ``All are required [to hear] the sounding of the shofar, but not all are knowledgeable in the sounding of the shofar. [Let there be] a decree [forbidding its sounding on the Shabbat], lest one take [the shofar] in his hand and go to one knowledgeable in order to learn [how to sound it], and so [transgress the Shabbat by] traversing four \emph{amot} in a \emph{reshut harabim.}''
+
+    But at first sight, this is not understood. Why did \emph{chazal} see [fit] to uproot a positive \emph{mitzvah} of the Torah, based only on a possibility of [violating] a decree? [Furthermore,] the possibility is [only] for regular folk and the easily-distracted. [If so,] how could they completely withhold the mitzvah from so many great and good \emph{tzadikim}? and especially such a lofty and exalted \emph{mitzvah} as the mitzvah of \emph{shofar!} As is known, all the \emph{mitzvot} of this month [of \emph{Tishrei}] are all-encompassing \emph{mitzvot}, as it says in \emph{Midrash Rabbah} regarding the verse ``And in the seventh \emph{[shevi'i]} month...'' [it is so termed] because it is satiated \emph{[mus'va]} with everything, since it has many \emph{mitzvot}. [Futhermore,] these \emph{[mitzvot]} are different from the \emph{mitzvot} of the rest of the year, because they are all-encompassing \emph{mitzvot}. This is especially so of the \emph{mitzvah} of \emph{shofar}, which awakens and draws down the inner aspect and essence of the \emph{Or Ein Sof}....
+
+\end{english}
+\end{document}  
