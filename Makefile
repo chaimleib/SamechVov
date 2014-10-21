@@ -52,12 +52,12 @@ openlog: $(TARGET).log
 	$(OPEN) $(TARGET).log
 
 cleantemps:
-	rm -rf *.aux *.out
+	rm -rf *.aux *.out *.synctex.gz
 
 cleanlogs:
 	rm -rf *.log
 
 cleanoutput:
-	rm -rf *.pdf *.tex
+	rm -rf *.pdf
 
 	
