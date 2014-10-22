@@ -13,8 +13,8 @@ OPTIONS+= --latex-engine=xelatex
 
 
 
-all: render open cleantemps cleanlogs
-verbose: pandoc render open openlog cleantemps
+all: $(TARGET).pdf open cleantemps cleanlogs
+verbose: pandoc $(TARGET).pdf open openlog cleantemps
 clean: cleantemps cleanlogs cleanoutput
 run: all
 
@@ -39,11 +39,14 @@ endif
 # 		-o $(TARGET).tex
 
 
-render: $(TARGET).tex
+$(TARGET).pdf: $(TARGET).tex
 	# pdflatex $(TARGET).tex
 	xelatex \
 		$(TARGET).tex \
 		-o $(TARGET).pdf
+
+png: $(TARGET).pdf
+	convert -density 300 $(TARGET).pdf $(TARGET).png
 
 open: $(TARGET).pdf
 	$(OPEN) $(TARGET).pdf
@@ -58,6 +61,6 @@ cleanlogs:
 	rm -rf *.log
 
 cleanoutput:
-	rm -rf *.pdf
+	rm -rf *.pdf *.png
 
 	
