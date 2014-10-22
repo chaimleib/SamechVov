@@ -6,7 +6,7 @@ An exercise in Hebrew typesetting using LaTeX.
 Dependencies
 ------------
 ### make
-The Makefile has been tested on Mac OS X 10.9, and in Cygwin under Windows 7.
+The Makefile has been tested on Mac OS X 10.9, and in Cygwin under Windows 7. It will probably work elsewhere, too.
 
 ### Fonts
 Whether or not you use the Makefile, the following fonts are required:
