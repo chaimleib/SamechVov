@@ -28,20 +28,8 @@ else
 endif
 	
 
-# pandoc: $(TARGET).md
-# 	pandoc \
-# 		$(OPTIONS) \
-# 		--from markdown \
-# 		--to latex \
-# 		$(TARGET).md \
-# 		-o $(TARGET).tex
-
-
 $(TARGET).pdf: $(TARGET).tex
-	# pdflatex $(TARGET).tex
-	xelatex \
-		$(TARGET).tex \
-		-o $(TARGET).pdf
+	xelatex $(TARGET).tex
 
 png: $(TARGET).pdf
 	convert -density 300 $(TARGET).pdf $(TARGET).png
