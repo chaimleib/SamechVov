@@ -3,16 +3,10 @@
 #	imagemagick (install using brew, etc.)
 
 TARGET=$(shell basename "`pwd`")
-TEMPLATE=default.latex
-
-OPTIONS= -V geometry:margin=1in
-# OPTIONS+= --template=$(TEMPLATE)
-OPTIONS+= --latex-engine=xelatex
 
 
-
-all: $(TARGET).pdf open cleantemps cleanlogs
-verbose: $(TARGET).pdf open openlog cleantemps
+all: pdf open cleanlogs
+verbose: pdf open openlog
 clean: cleantemps cleanlogs cleanoutput
 run: all
 
@@ -31,10 +25,12 @@ endif
 $(TARGET).pdf: $(TARGET).tex
 	xelatex $(TARGET).tex
 
-png: $(TARGET).pdf
+pdf: $(TARGET).pdf cleantemps
+
+png: pdf
 	convert -density 300 $(TARGET).pdf $(TARGET).png
 
-open: $(TARGET).pdf
+open: pdf
 	$(OPEN) $(TARGET).pdf
 
 openlog: $(TARGET).log
