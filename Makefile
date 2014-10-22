@@ -1,8 +1,6 @@
 # REQUIREMENTS
 #   latex   (use MacTeX, MikTeX, etc)
-#   pandoc	(use brew to install on Mac, Windows download from
-#   	https://github.com/jgm/pandoc/releases
-#   	)
+#	imagemagick (install using brew, etc.)
 
 TARGET=$(shell basename "`pwd`")
 TEMPLATE=default.latex
@@ -14,7 +12,7 @@ OPTIONS+= --latex-engine=xelatex
 
 
 all: $(TARGET).pdf open cleantemps cleanlogs
-verbose: pandoc $(TARGET).pdf open openlog cleantemps
+verbose: $(TARGET).pdf open openlog cleantemps
 clean: cleantemps cleanlogs cleanoutput
 run: all
 
