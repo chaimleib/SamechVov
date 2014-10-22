@@ -10,6 +10,8 @@ Running make requires that you have the following fonts:
 * Frank Ruehl CLM
 * Hoefler Text
 
+You can download them from the [Open Siddur Project](http://opensiddur.org/tools/fonts/).
+
 The following software is required:
 * pandoc
 * xelatex
