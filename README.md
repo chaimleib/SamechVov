@@ -18,3 +18,6 @@ The following software is required:
 * xelatex (Part of MacTeX, MikTeX, TeXLive, etc.)
 * imagemagick (to run `make png`)
 
+TODO
+----
+Of course this project is far from complete. See the Github [issue tracker](https://github.com/chaimleib/SamechVov/issues) for this project.
