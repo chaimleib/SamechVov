@@ -16,7 +16,7 @@ ifeq ($(PLATFORM), Windows_NT)
 	PLATFORM=cygwin
 endif
 ifeq ($(PLATFORM), cygwin)
-	OPEN=$(shell cygstart && echo cygstart || echo start)
+	OPEN=$(shell cygstart --version &>/dev/null && echo cygstart -o || echo start)
 else
 	OPEN=open
 endif
