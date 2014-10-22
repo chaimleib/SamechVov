@@ -24,7 +24,7 @@ ifeq ($(PLATFORM), Windows_NT)
 	PLATFORM=cygwin
 endif
 ifeq ($(PLATFORM), cygwin)
-	OPEN=cygstart
+	OPEN=$(shell cygstart && echo cygstart || echo start)
 else
 	OPEN=open
 endif
