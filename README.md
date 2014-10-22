@@ -8,12 +8,13 @@ Dependencies
 Running make requires that you have the following fonts:
 * Miriam CLM
 * Frank Ruehl CLM
-* Hoefler Text
+* TeX Guire Pagella (a Palatino lookalike)
 
-You can download them from the [Open Siddur Project](http://opensiddur.org/tools/fonts/).
+You can download them from:
+* [Open Siddur Project](http://opensiddur.org/tools/fonts/)
+* [TeX Guire Pagella](http://www.gust.org.pl/projects/e-foundry/tex-gyre/pagella)
 
 The following software is required:
-* pandoc
-* xelatex
+* xelatex (Part of MacTeX, MikTeX, TeXLive, etc.)
 * imagemagick (to run `make png`)
 
