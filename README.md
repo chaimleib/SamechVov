@@ -5,8 +5,13 @@ An exercise in Hebrew typesetting using LaTeX.
 
 Dependencies
 ------------
-### make
-The Makefile has been tested on Mac OS X 10.9, and in Cygwin under Windows 7. It will probably work elsewhere, too.
+### OS
+All features have been tested on the following systems:
+* Mac OS X 10.9 (MacTeX 2014)
+* Cygwin under Windows 7 (MiKTeX 2014)
+* Ubuntu Linux 2014 (manual TeXLive 2014 install)
+
+It will probably work elsewhere, too.
 
 ### Fonts
 Whether or not you use the Makefile, the following fonts are required:
@@ -30,6 +35,8 @@ Rendering to PDF
 Just run `make`. It will try to open the PDF for you when it's done.
 
 If you don't need to open it, or there is something wrong with `make`, just run `make pdf`.
+
+If the Makefile does not work, run `xelatex SamechVov.pdf`
 
 Rendering to PNG
 ----------------

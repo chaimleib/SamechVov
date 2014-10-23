@@ -2,6 +2,7 @@
 #   latex   (use MacTeX, MikTeX, etc)
 #	imagemagick (install using brew, etc.)
 
+SHELL=bash
 TARGET=$(shell basename "`pwd`")
 
 
@@ -18,9 +19,9 @@ endif
 ifeq ($(PLATFORM), cygwin)
 	OPEN=$(shell cygstart --version &>/dev/null && echo cygstart -o || echo start)
 else
-	OPEN=open
+	OPEN=$(shell xdg-open --version &>/dev/null && echo xdg-open || echo open)
 endif
-	
+
 
 $(TARGET).pdf: $(TARGET).tex
 	xelatex $(TARGET).tex
