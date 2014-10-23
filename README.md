@@ -20,11 +20,11 @@ You can download them for free from:
 
 ### Programs
 The following software is required:
-* xelatex
-: Part of MacTeX, MikTeX, TeXLive, etc. If you install TeXLive, it is recommended to NOT use your package manager, but to perform a [manual install](https://www.tug.org/texlive/acquire-netinstall.html).)
+xelatex
+: Part of MacTeX, MikTeX, TeXLive, etc. If you install TeXLive, it is recommended to NOT use your package manager, but to perform a [manual install](https://www.tug.org/texlive/acquire-netinstall.html).
 
 The following software is only needed for certain features:
-* imagemagick
+imagemagick
 : to run `make png`
 
 Rendering to PDF
