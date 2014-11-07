@@ -27,12 +27,14 @@ $(TARGET).pdf: $(TARGET).tex
 	xelatex $(TARGET).tex
 
 pdf: $(TARGET).pdf cleantemps
+	touch $(TARGET).pdf
 
+# produces a series of pngs if multipage document
 png: pdf
 	convert -density 300 $(TARGET).pdf $(TARGET).png
 
-open: pdf
-	$(OPEN) $(TARGET).pdf
+open:
+	$(OPEN) $(shell ls -t $(TARGET).{pdf,html} 2>/dev/null | head -n1)
 
 openlog: $(TARGET).log
 	$(OPEN) $(TARGET).log
@@ -46,4 +48,3 @@ cleanlogs:
 cleanoutput:
 	rm -rf *.pdf *.png
 
-	
